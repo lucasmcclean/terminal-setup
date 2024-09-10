@@ -9,7 +9,7 @@ return {
   },
   config = function()
     vim.api.nvim_create_autocmd('LspAttach', {
-      group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
+      group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
       callback = function(event)
         local map = function(keys, func, desc)
           vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
@@ -26,7 +26,7 @@ return {
         map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
         local client = vim.lsp.get_client_by_id(event.data.client_id)
         if client and client.server_capabilities.documentHighlightProvider then
-          local highlight_augroup = vim.api.nvim_create_augroup('kickstart-lsp-highlight', { clear = false })
+          local highlight_augroup = vim.api.nvim_create_augroup('lsp-highlight', { clear = false })
           vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
             buffer = event.buf,
             group = highlight_augroup,
