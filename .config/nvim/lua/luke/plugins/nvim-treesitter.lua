@@ -2,7 +2,19 @@ return {
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
   opts = {
-    ensure_installed = { 'bash', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'go' },
+    ensure_installed = {
+      'bash',
+      'html',
+      'lua',
+      'luadoc',
+      'markdown',
+      'vim',
+      'vimdoc',
+      'go',
+      'gdscript',
+      'godot_resource',
+      'gdshader',
+    },
     auto_install = true,
     highlight = {
       enable = true,

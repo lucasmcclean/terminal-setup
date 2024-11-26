@@ -13,10 +13,8 @@ set -o vi
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
-PATH="$PATH:/usr/local/go/bin:$(go env GOPATH)/bin"
-
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
+PATH="$PATH:/usr/local/go/bin:/home/lucas/go/bin"
+PATH="$PATH:$HOME/dev/scripts"
 
 # Source user-defined functions/aliases
 if [ -f $HOME/.bash_aliases ]; then

@@ -44,3 +44,6 @@ function ginit {
     git push -u origin main
   fi
 }
+
+# Godot
+alias gnvim="nvim --listen ./godothost"
