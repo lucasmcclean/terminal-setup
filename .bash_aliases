@@ -46,4 +46,4 @@ function ginit {
 }
 
 # Godot
-alias gnvim="nvim --listen ./godothost"
+alias gnvim="nvim --listen /tmp/godothost"
