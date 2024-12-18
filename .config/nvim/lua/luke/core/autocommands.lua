@@ -11,6 +11,6 @@ vim.api.nvim_create_autocmd('BufEnter', {
   pattern = '*.md',
   callback = function()
     vim.opt_local.textwidth = 85
-    vim.opt.colorcolumn = '85'
+    vim.opt.colorcolumn = '86'
   end,
 })
