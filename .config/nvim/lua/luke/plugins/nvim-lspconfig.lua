@@ -77,6 +77,7 @@ return {
       html = {},
       cssls = {},
       templ = {},
+      tailwindcss = {},
     }
 
     require('mason').setup()

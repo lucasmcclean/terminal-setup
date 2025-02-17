@@ -20,9 +20,13 @@ return {
         lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
       }
     end,
+    stop_after_first = true,
     formatters_by_ft = {
       lua = { 'stylua' },
-      javascript = { { 'prettierd', 'prettier' } },
+      javascript = {
+        'prettierd',
+        'prettier',
+      },
       templ = { 'templ' },
       html = { 'html' },
     },
